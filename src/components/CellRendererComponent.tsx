@@ -129,7 +129,7 @@ function CellRendererComponent<T>(props: Props<T>) {
   const onCellLayout = useCallback(
     (e: LayoutChangeEvent) => {
       updateCellMeasurements();
-      onLayout(e);
+      onLayout && onLayout(e);
     },
     [updateCellMeasurements, onLayout]
   );
